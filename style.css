@@ -1,0 +1,310 @@
+:root {
+    --red: #e63946;
+    --light-white: #f1faee;
+    --light-blue: #a8dadc;
+    --blue: #457b9d;
+    --dark-blue: #1d3557;
+    --dark: #293241;
+    
+    --red-night: #af6e74;
+    --light-white-night: #f4f7f3;
+    --light-blue-night: #b8cbcc;
+    --blue-night: #607480;
+    --dark-blue-night: #303946;
+    --dark-night: #2F343C;
+    
+    --night: #121417;
+    --light: #fcbf49;
+  }
+
+  * {
+    transition: .5s;
+  }
+  
+  body {
+    background: var(--light-blue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body.night {
+    background: var(--night);
+  }
+  
+  .lighthouse {
+  /*   border: 2px solid red; */
+    height: 400px;
+    width: 400px;
+    position: relative;
+  }
+  
+  .tip {
+    background: var(--red);
+    height:50px;
+    width: 80px;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 30px;
+    left: 40%;
+  }
+  
+  .tip.night {
+    background: var(--red-night);
+  }
+  
+  .tip-base {
+    width: 110px;
+    height:20px;
+    background: var(--light-white);
+    position: absolute;
+    top: 35px;
+    left: -15px;
+    border-radius: 50px;
+  }
+  
+  .tip-base.night {
+     background: var(--light-white-night);
+  }
+  
+  .window-base {
+    height: 60px;
+    width: 80px;
+    background: var(--red);
+    position: absolute;
+    top: 85px;
+    left: 40%;
+  }
+  
+  .window-base.night {
+    background: var(--red-night);
+  }
+  
+  .window-l {
+    background: var(--blue);
+    height: 40px;
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+  }
+  
+  .window-l.night {
+    background: var(--light);
+    box-shadow: 0 0 30px 15px var(--light);
+  }
+  
+  .window-l-shine {
+    background: rgba(255,255,255,.3);
+    height: 10px;
+    width: 40px;
+    transform: rotate(20deg);
+    position: absolute;
+    bottom: 20px;
+    right: -5px;
+  }
+  
+  .window-r {
+    background: var(--blue);
+    height: 40px;
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    overflow: hidden;
+  }
+  
+  .window-r.night {
+    background: var(--light);
+    box-shadow: 0 0 30px 15px var(--light);
+  }
+  
+  .window-r-shine {
+    background: rgba(255,255,255,.3);
+    height: 10px;
+    width: 40px;
+    transform: rotate(20deg);
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+  }
+  
+  .top {
+    height: 40px;
+    width: 115px;
+    background: var(--light-white);
+    position: absolute;
+    top: 145px;
+    left: 36%;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .top.night {
+    background: var(--light-white-night);
+  }
+  
+  .base-1 {
+    height: 40px;
+    width: 115px;
+    background: var(--red);
+    position: absolute;
+    top: 185px;
+    left: 36%;
+  }
+  
+  .base-1.night {
+    background: var(--red-night);
+  }
+  
+  .base-2 {
+    height: 40px;
+    width: 115px;
+    background: var(--light-white);
+    position: absolute;
+    top: 225px;
+    left: 36%;
+  }
+  
+  .base-2.night {
+    background: var(--light-white-night);
+  }
+  
+  .base-3 {
+    height: 40px;
+    width: 115px;
+    background: var(--red);
+    position: absolute;
+    top: 265px;
+    left: 36%;
+  }
+  
+  .base-3.night {
+    background: var(--red-night);
+  }
+  
+  .base-4 {
+    height: 40px;
+    width: 115px;
+    background: var(--light-white);
+    position: absolute;
+    top: 305px;
+    left: 36%;
+  }
+  
+  .base-4.night {
+    background: var(--light-white-night);
+  }
+  
+  .hole-inner {
+    height: 60px;
+    width: 60px;
+    background: var(--dark);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    left: 25%;
+    top: -10px;
+  }
+  
+  .hole-inner.night {
+    background: var(--dark-night);
+  }
+  
+  .hole-outer {
+    height: 40px;
+    width: 40px;
+    background: var(--blue);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+  }
+  
+  .hole-outer.night {
+    background: var(--blue-night);
+  }
+  
+  .hole-shine {
+    background: rgba(255,255,255,.3);
+    height: 10px;
+    width: 50px;
+    transform: rotate(20deg);
+    position: absolute;
+    bottom: 15px;
+    right: -5px;
+  }
+  
+  .hole-shine.night {
+    background: rgba(0,0,0,.3);
+  }
+  
+  .bottom-base {
+    height: 40px;
+    width: 160px;
+    background: var(--dark);
+    position: absolute;
+    top: 345px;
+    left: 31%;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .bottom-base.night {
+    background: var(--dark-night);
+  }
+  
+  .water {
+    height: 50%;
+    width: 100%;
+    background: var(--blue);
+    position: absolute;
+    bottom: -185px;
+    left:0;
+  }
+  
+  .water.night {
+    background: var(--blue-night);
+  }
+  
+  input[type='checkbox'] {
+    position: absolute;
+    height: 50px;
+    width: 130px;
+    -webkit-appearance: none;
+    background: #fff;
+    border-radius: 50px;
+    outline: none;
+    bottom: 10px;
+  }
+  
+  input[type='checkbox']::before {
+      content: '';
+      height: 40px;
+      width: 40px;
+      background-color: var(--blue);
+      position: absolute;
+      border-radius: 50px;
+      top: 5px;
+      left: 5px;
+      transition: .5s;
+
+  }
+  
+  input:checked[type="checkbox"]::before {
+      content: '';
+      height: 40px;
+      width: 40px;
+      background-color: var(--dark-night);
+      position: absolute;
+      top: 5px;
+      left: 85px;
+      border-radius: 50px;
+      transition: .5s;
+  }
+  
+  
+  
